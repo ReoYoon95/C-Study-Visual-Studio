@@ -1,8 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="../두번쨰 테스트/두번쨰 테스트.vcxproj" Id="8f272e36-e109-42b9-9faf-3a235051b48b" />
-  <Project Path="깃허브연결test.vcxproj" />
-</Solution>
