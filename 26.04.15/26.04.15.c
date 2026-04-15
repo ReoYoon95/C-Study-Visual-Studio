@@ -159,5 +159,5 @@ int test5(void)
         printf("윤년입니다.\n");
     else
         printf("평년입니다.\n");
-    return0;
+    return 0;
 }
