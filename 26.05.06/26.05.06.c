@@ -10,6 +10,7 @@ int example7_7(void);
 int example7_8(void);
 int example7_9(void);
 int example7_10(void);
+int example7_11(void);
 int example7_12(void);
 int example7_13(void);
 int example7_13_1(void);
@@ -19,29 +20,36 @@ int example7_16(void);
 int example7_17(void);
 int example7_18(void);
 int example7_19(void);
+int example7_20(void);
+int example7_21(void);
 
 
 int main(void) {
-	printf(example7_1);
-	printf(example7_2);
-	printf(example7_3);
-	printf(example7_4);
-	printf(example7_5);
-	printf(example7_6);
-	printf(example7_7);
-	printf(example7_8);
-	printf(example7_9);
-	printf(example7_10);
-	printf(example7_11);
-	printf(example7_12);
-	printf(example7_13);
-	printf(example7_13_1);
-	printf(example7_14);
-	printf(example7_15);
-	printf(example7_16);
-	printf(example7_17);
-	printf(example7_18);
-	printf(example7_19);
+	//printf(example7_1);
+	//printf(example7_2);
+	//printf(example7_3);
+	//printf(example7_4);
+	//printf(example7_5);
+	//printf(example7_6);
+	//printf(example7_7);
+	//printf(example7_8);
+	//printf(example7_9);
+	//printf(example7_10);
+	//printf(example7_11);
+	//printf(example7_12);
+	//printf(example7_13);
+	//printf(example7_13_1);
+	//printf(example7_14);
+	//printf(example7_15);
+	//printf(example7_16);
+	//printf(example7_17);
+	//printf(example7_18);
+	//printf(example7_19);
+	//printf(example7_20);
+	example7_21();
+
+	
+	
 
 	return 0;
 }
@@ -381,11 +389,36 @@ int example7_19(void)
 			printf("곱셈 결과는 %d입니다.\n", num1 * num2);
 			break;
 		case '/':
-			printf("나눗셈 결과는 %d입니다.\n", num1 / num2);
+			printf("나눗셈 결과는 %.2f입니다.\n", (double)num1 / num2);
 			break;
 		default:
 			printf("다시 입력하세요\n");
 			break;
+	}
+	return 0;
+}
+
+int example7_20(void)
+{
+	for (int i = 0; i < 100; i++) {
+		printf("홍길동\n");
+	}
+
+	for (int j = 0; j < 10; j++) {
+		printf("Hello\n");
+	}
+
+	int n, sum = 0;
+
+	for (n = 1; n <= 100; n++) sum = sum + n;
+	printf("%d\n", sum);
+	return 0;
+}
+
+int example7_21(void)
+{
+	for (int i = 0; i < 1000; i++) {
+		printf("홍길동 %4d번째\n", i + 1);
 	}
 	return 0;
 }
