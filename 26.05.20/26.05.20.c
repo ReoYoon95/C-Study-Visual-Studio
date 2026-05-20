@@ -7,6 +7,11 @@ int add(int x, int y);
 int add3Num(int x, int y, int z);
 double avr3(int x, int y, int z);
 char vending(int x);
+int sum(int n);
+
+
+
+
 
 int main(void) {
 
@@ -23,9 +28,14 @@ int main(void) {
 	//double d = avr3(30, 40, 60);
 	//printf("%.2lf\n", d);
 
-	char x;
-	x = vending(1);
-	printf("%c\n", x);
+	//char x;
+	//x = vending(1);
+	//printf("%c\n", x);
+
+	int in = 3, out;
+	out = sum(in);  //함수 호출
+	printf("\nin=%d,out=%d\n", in, out);
+
 	return 0;
 }
 
@@ -35,7 +45,7 @@ int main(void) {
 
 //컨트롤m +o 하면 함수단위로 닫힘
 //컨트롤m +ㅣ하면 함수단위로 열림
-//c언어에서 메인함수는 단 한번만 사용가능하고 없어서는 안된다.
+//c언어에서 메인함수는 단 한번만 사용가 능하고 없어서는 안된다.
 //void view(void);	//함수 선언 또는 원형
 
 
@@ -86,6 +96,14 @@ char vending(int x)
 		default: return 'D';
 
 	}
+}
+
+int sum(int n)
+{
+	printf("n=%d  ", n);
+	if (n <= 1) return(1);
+	else return(n + sum(n - 1));
+
 }
 
 
