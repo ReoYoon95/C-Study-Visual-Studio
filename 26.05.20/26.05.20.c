@@ -6,7 +6,7 @@ int doubNum(int x);
 int add(int x, int y);
 int add3Num(int x, int y, int z);
 double avr3(int x, int y, int z);
-
+char vending(int x);
 
 int main(void) {
 
@@ -20,9 +20,12 @@ int main(void) {
 	//printf("%d\n", b);
 	//int c = add3Num(1, 2, 3);
 	//printf("%d\n", c);
+	//double d = avr3(30, 40, 60);
+	//printf("%.2lf\n", d);
 
-	double d = avr3(30, 40, 60);
-	printf("%.2lf\n", d);
+	char x;
+	x = vending(1);
+	printf("%c\n", x);
 	return 0;
 }
 
@@ -66,3 +69,23 @@ double avr3(int x, int y, int z) {
 	double avr = (double)sum / 3;
 	return avr;
 }
+
+char vending(int x)
+{
+	switch (x)
+	{
+		case 1:
+			return 'A';
+
+		case 2:
+			return 'B';
+
+		case 3:
+			return 'C';
+
+		default: return 'D';
+
+	}
+}
+
+
