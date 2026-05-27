@@ -10,13 +10,19 @@ int example9_4(void);
 void sub(void);
 int example9_5(void);
 int example10_1(void);
+int example10_2(void);
+int example10_3(void);
+
+
+
 
 int main(void)
 {
 	//sub();
 	//sub();
 	//sub();
-	example10_1();
+	//example10_1();
+	example10_3();
 
 	return 0;
 }
@@ -123,5 +129,29 @@ int example10_1(void)
 	x[2] = 1;
 	printf("%d\n", x[0]);
 
+	return 0;
+}
+
+int example10_2(void)
+{
+	int han[10] = { 10,20 };
+	//int han1[2] = { 10,20,30 };// error C2078: 이니셜라이저가 너무 많습니다.
+	int han2[10] = { 0 };
+	printf("%d %d %d\n", han[0], han[1], han[2]);
+	printf("%d %d %d\n", han2[0], han2[1], han2[2]);
+	return 0;
+}
+
+int example10_3(void)
+{
+	int i, num[5];
+	printf("5개의 수를 입력받아 역순으로 출력합니다.\n");
+	for (i = 0; i < 5; i++) {
+		printf("%d번째 수를 입력하세요=", i + 1);
+		scanf_s("%d", &num[i]);
+	}
+	for (i = 4; i >= 0; i--) {
+		printf("%d -> ", num[i]);
+	}
 	return 0;
 }
