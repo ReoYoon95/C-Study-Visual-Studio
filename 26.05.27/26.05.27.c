@@ -12,7 +12,9 @@ int example9_5(void);
 int example10_1(void);
 int example10_2(void);
 int example10_3(void);
-
+int example10_4(void);
+int example10_5(void);
+int example10_6(void);
 
 
 
@@ -22,7 +24,8 @@ int main(void)
 	//sub();
 	//sub();
 	//example10_1();
-	example10_3();
+	//example10_3();
+	example10_6();
 
 	return 0;
 }
@@ -152,6 +155,61 @@ int example10_3(void)
 	}
 	for (i = 4; i >= 0; i--) {
 		printf("%d -> ", num[i]);
+	}
+	return 0;
+}
+
+int example10_4(void) {
+
+	char st[] = "soft";
+	printf("%s\n", st);
+	return 0;
+}
+
+int example10_5(void) {
+
+	char name[10];
+	printf("당신의이름을입력하세요=");
+	//scanf("%s", name); //gets(name);와차이점?
+	//scanf_s("%s", name, (unsigned int)sizeof(name));
+	//scanf("%9s", name); //9개만 받음. 마지막은 널문자.
+	scanf_s("%s", name, (unsigned int)sizeof(name));
+	printf("당신의이름은%s입니다.\n", name);
+	return 0;
+}
+
+int example10_6(void)
+{
+	int i, num[5], kor[5], eng[5], mat[5], total[5];
+	double avgkor = 0.0, avgeng = 0.0, avgmat = 0.0;
+	double avg[5];
+	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n");
+	printf("┃     성적처리프로그램입니다.     ┃\n");
+	printf("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+	for (i = 0; i < 5; i++) {
+		printf("%d번째학생의학번을입력하고Enter를누르세요=", i + 1);
+		scanf_s("%d", &num[i]);
+		printf("국어점수를입력하고Enter를누르세요=");
+		scanf_s("%d", &kor[i]);
+		printf("영어점수를입력하고Enter를누르세요=");
+		scanf_s("%d", &eng[i]);
+		printf("수학점수를입력하고Enter를누르세요=");
+		scanf_s("%d", &mat[i]);
+		total[i] = kor[i] + eng[i] + mat[i];
+		avg[i] = total[i] / 3.0;
+		avgkor = avgkor + kor[i];
+		avgeng = avgeng + eng[i];
+		avgmat = avgmat + mat[i];
+		printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n");
+		printf("┃     성적처리결과입니다.       ┃\n");
+		printf("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+		printf("학번총점평균\n");
+		for (i = 0; i < 5; i++) {
+			printf("%3d %6d    %7.2f\n", num[i], total[i], avg[i]);
+		}
+		printf("국어평균: %g\n영어평균: %g\n수학평균: %g\n",
+			avgkor / 5., avgeng / 5., avgmat / 5.);
+
 	}
 	return 0;
 }
